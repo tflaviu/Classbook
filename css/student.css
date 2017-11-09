@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.main {
+    min-height: 100%;
+}
+
+.logout {
+    /*position: absolute;*/
+    display: block;
+    color: #fff;
+    float: right;
+    clear: both;
+    font-size: 1.5rem;
+    margin: 25.5px 50px 0px 0px;
+    background: transparent;
+    width: auto;
+    z-index: 2;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logout a:hover {
+    /*color: #B8B8B8;*/
+    color: #ff4d4d;
+    /*background: transparent;*/
+}
+
+.grades_div {
+    padding-top: 50px;
+    margin-right: 50%;
+    width: 500px;
+}
+
+.grade_span {
+    width: 120px;
+    /*margin: 0 auto;*/
+    padding-top: 20px;
+    margin-left: 50px;
+    /*display: block;*/
+}
+
+.display_block {
+    display: block;
+}
+

@@ -1,0 +1,40 @@
+span.error_span {
+    margin-left: 6px;
+    height:17px;
+    font-family: Tahoma;
+    /*color: #cc0000;*/
+    color: black;
+    font-weight: 900;
+    background-color: #FFCCCC;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 10px;
+}
+label.error_span {
+    height:17px;
+    margin-left:9px;
+    padding:5px 5px 5px 5px;
+    padding: 10px;
+    font-size:small;
+}
+
+/*input[type="button"] {*/
+    /*background: #fff;*/
+    /*color: #000;*/
+    /*outline: none;*/
+    /*display: block;*/
+    /*margin: 0 auto;*/
+    /*border: none;*/
+    /*cursor: pointer;*/
+    /*padding: 9px 38px;*/
+    /*font-size: 14px;*/
+    /*margin-top: 55px;*/
+    /*font-weight: bold;*/
+    /*text-transform: uppercase;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*transition: 0.3s all;*/
+    /*-webkit-transition: 0.3s all;*/
+    /*-moz-transition: 0.3s all;*/
+    /*-o-transition: 0.3s all;*/
+    /*-ms-transition: 0.3s all;*/
+/*}*/
