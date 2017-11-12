@@ -2,11 +2,11 @@ html, body {
     height: 100%;
     margin: 0;
 }
-.dropdown-content button:hover {
+.dropdown-content button:hover, a:hover {
     background-color: #ff4d4d;
 }
 
-.addTeacher, .addDepartment, .addClass, .department_student, .addStudent, .addAdministrator {
+.addTeacher, .addDepartment, .addClass, .department_student, .addStudent, .addAdministrator, .addStdToDep, .addTeacherToDep {
     color: #fff;
     border: none;
     background-color: #333333;
@@ -16,6 +16,8 @@ html, body {
     font-family: 'Anonymous Pro', monospace;
     min-width: 160px;
     padding: 12px 16px;
+    text-transform: capitalize;
+    /*text-decoration: none;*/
 }
 
 .dropdown {
@@ -27,6 +29,7 @@ html, body {
     margin-right: 100px;
     font-size: 20px;
     margin-top: 24px;
+    text-align: center;
 }
 
 .dropdown-content {
@@ -40,25 +43,32 @@ html, body {
     z-index: 1;
 }
 
-.logout {
+.logout, .back {
+    /*position: absolute;*/
     display: block;
     color: #fff;
     float: right;
     clear: both;
     font-size: 1.5rem;
-    margin-top: -33px;
-    margin-right: 50px;
+    margin: -25.5px 50px 0px 0px;
+    background: transparent;
+    width: auto;
     z-index: 2;
 }
 
-.logout a {
+.logout a, .back a {
     text-decoration: none;
     color: #fff;
 }
 
-.logout a:hover {
+.logout a:hover, .back a:hover {
     /*color: #B8B8B8;*/
     color: #ff4d4d;
+    /*background: transparent;*/
+}
+
+.back {
+    margin-top: 25.5px;
 }
 
 .main {
@@ -67,6 +77,22 @@ html, body {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.adminForm {
+    margin-top: 50px;
+}
+
+.addStdToDep:hover, .addTeacherToDep:hover {
+    text-decoration: none !important;
+    color: #fff;
+}
+
+.welcome_text {
+    color: #fff;
+    margin-left: 40%;
+    margin-top: 50px;
+    font-size: 1.8rem;
 }
 
 .footer {

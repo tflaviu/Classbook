@@ -6,7 +6,6 @@
     <link href="../css/admin.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/header.css" rel="stylesheet" type="text/css" media="all"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
     <link href="../vendors/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
@@ -38,6 +37,8 @@
                 <button class="addAdministrator" id="addAdministrator">Add Admin</button>
                 <button class="addDepartment" id="addDepartment">Add Department</button>
                 <button class="addClass" id="addClass">Add Class</button>
+                <button onclick="location.href = 'student_to_department.php';" class="addTeacherToDep">Add student to department</button>
+                <button onclick="location.href = 'teacher_to_department.php';" class="addTeacherToDep">Add teacher to department</button>
             </div>
         </div>
         <div class="logout">
@@ -46,6 +47,7 @@
     </div>
 
     <div class="main">
+        <?php echo "<h2 class='welcome_text'>" . "Welcome " . $_SESSION['user_name'] . "</h2>"; ?>
         <div id="teacherForm" class="adminForm form-w3-agile" style="display:none;" >
             <h2>Teacher</h2>
             <form id="register-form" action="../php/admin_actions.php" method="post">

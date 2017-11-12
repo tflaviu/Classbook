@@ -19,6 +19,7 @@
         header("Location: student.php");
         }
 
+        print_r($_SESSION['id_user']);
     include_once "../php/teacher_commands.php";
     ?>
     

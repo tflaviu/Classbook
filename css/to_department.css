@@ -1,0 +1,19 @@
+select option {
+    margin-top: 10px;
+}
+
+select {
+    color: #fff;
+    background-color: rgb(223, 87, 153);
+    border-radius: 20px;
+}
+
+.teacher_row:first-child, .student_row:first-child {
+    margin-top: 50px;
+}
+.teacher_row, .student_row {
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    margin: 10px 0px 0px 50px;
+}

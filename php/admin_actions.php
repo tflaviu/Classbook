@@ -16,7 +16,7 @@ if(isset($_POST['teacher_submit'])) {
     $sql = "INSERT INTO users (user_name, email, password, user_type) VALUES ('$name', '$email', '$password', 1)";
     $result = $db->query($sql);
     if ($result) {
-        echo "Success";
+        header("Location: ../pages/admin.php");
     }
 } elseif (isset($_POST['department_submit'])) {
     $department = $_POST['department'];
@@ -25,7 +25,7 @@ if(isset($_POST['teacher_submit'])) {
 
     $result = $db->query($sql);
     if ($result) {
-        echo "Success";
+        header("Location: ../pages/admin.php");
     }
 } elseif (isset($_POST['class_submit'])) {
     $class = $_POST['class'];
@@ -33,7 +33,7 @@ if(isset($_POST['teacher_submit'])) {
     $result = $db->query($sql);
 
     if ($result) {
-        echo "Success!";
+        header("Location: ../pages/admin.php");
     }
 } elseif (isset($_POST['stdToDep_submit'])) {
     $student = $_POST['checked_student'];
@@ -50,7 +50,7 @@ if(isset($_POST['teacher_submit'])) {
         $sql = "INSERT INTO student_department (fk_department, fk_user) VALUES ('$n', '$student[$key]')";
         $result = $db->query($sql);
         if ($result) {
-            echo "Success";
+            header("Location: ../pages/admin.php");
         }
     }
 
@@ -69,7 +69,7 @@ if(isset($_POST['teacher_submit'])) {
         $sql = "INSERT INTO teacher_department (fk_department, fk_teacher) VALUES ('$n', '$teacher[$key]')";
         $result = $db->query($sql);
         if ($result) {
-            echo "Success";
+            header("Location: ../pages/admin.php");
         }
     }
 
@@ -81,7 +81,7 @@ if(isset($_POST['teacher_submit'])) {
     $sql = "INSERT INTO users (user_name, email, password, user_type) VALUES ('$name', '$email', '$password', 2)";
     $result = $db->query($sql);
     if ($result) {
-        echo "Success";
+        header("Location: ../pages/admin.php");
     }
 } elseif (isset($_POST['administrator_submit'])) {
     $name = $_POST['administrator_name'];
@@ -91,8 +91,7 @@ if(isset($_POST['teacher_submit'])) {
     $sql = "INSERT INTO users (user_name, email, password, user_type) VALUES ('$name', '$email', '$password', 0)";
     $result = $db->query($sql);
     if ($result) {
-        $data="Success";
-//        header("Location: ../pages/admin.php");
+        header("Location: ../pages/admin.php");
     } else {
         echo "Error";
     }

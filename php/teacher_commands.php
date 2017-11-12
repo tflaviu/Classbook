@@ -17,13 +17,9 @@ function show_students() {
             INNER JOIN student_department sd ON td.fk_department = sd.fk_department)
             INNER JOIN users u ON sd.fk_user = u.id_user)
             WHERE fk_teacher = '$id_teacher'";
-//    AND id_user NOT IN ( SELECT fk_user FROM student_department )
 
     $result = $db->query($sql);
-    $students_array = array();
-    while ($row = $result->fetch_assoc()) {
-        array_push($students_array, $row['id_user']);
-    }
+
     echo "<form action='' method='post'>";
     while ($row = $result->fetch_assoc()) {
         echo "<input type='checkbox' name=\"student[]\" value="; echo $row['id_user']; echo "/>";
@@ -53,11 +49,65 @@ if (isset($_POST['grade_submit'])) {
         }
     }
 
+    //selecteaza clasa profesorului logat
+    $class_sql = "SELECT c.id_class
+                  FROM ( classes c
+                  INNER JOIN teacher_department td ON c.fk_teacher = td.fk_teacher)";
+
+    $class_result = $db->query($class_sql);
+    $class_row = $class_result -> fetch_assoc();
+    $class = $class_row['id_class'];
+
+//    cauta studentii care au note la materia aceasta
+//    $gradedStudents_sql = "SELECT fk_student
+//             FROM grades
+//             WHERE fk_class = 2;";
+
+    $gradedStudents_result = $db->query($gradedStudents_sql);
+    $gradedStudents_array = array();
+    while ($row = $gradedStudents_result -> fetch_assoc()) {
+        array_push($gradedStudents_array, $row['fk_student']);
+    }
+
     foreach ($grade_array as $key => $n) {
-        $sql = "INSERT INTO grades (fk_student, grade) VALUES ('$student[$key]', '$n')";
+        $sql = "INSERT INTO grades (fk_student, grade, fk_class) VALUES ('$student[$key]', '$n', '$class')";
         $result = $db->query($sql);
         if ($result) {
             echo "Success";
         }
     }
 }
+
+include_once '../php/connect.php';
+$db = dbConnect();
+
+$test_sql = "SELECT fk_student 
+             FROM grades 
+             WHERE fk_class != 2;";
+
+$test_result = $db->query($test_sql);
+
+while ($row = $test_result -> fetch_assoc()) {
+    echo $row['fk_student'];
+}
+//
+////cauta studentii care au note la materia aceasta
+//$gradedStudents_sql = "SELECT fk_student
+//             FROM grades
+//             WHERE fk_class = 2;";
+//
+//$gradedStudents_result = $db->query($gradedStudents_sql);
+//$gradedStudents_array = array();
+//while ($row = $gradedStudents_result -> fetch_assoc()) {
+//    array_push($gradedStudents_array, $row['fk_student']);
+//}
+//
+////cauta studentii fara nota
+//$ungradedStudents_array = array();
+//
+//foreach ($student as $key => $n) {
+//    foreach ($gradedStudents_array as $key2 => $n2) {
+//        if ($student[$key] != $gradedStudents_array[$key2]) {
+//            array_push($ungradedStudents_array, $student['$key']);
+//        }
+//    }
