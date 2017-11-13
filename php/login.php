@@ -22,7 +22,6 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
 //    $result = mysql_query("SELECT * FROM registration WHERE email='$email' AND password='$password'");
     $data = mysqli_num_rows($result);
     if($data==1){
-        echo "Successfully Logged in";
         session_start();
         $row = $result->fetch_assoc();
         $user_type = $row["user_type"];
@@ -33,13 +32,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
         $_SESSION['user_type'] = $user_type;
         $_SESSION['user_name'] = $user_name;
         $_SESSION['id_user'] = $id_user;
-        if ($user_type == 0) {
-            header("Location: ../pages/admin.php");
-        } elseif ($user_type == 1) {
-            header("Location: ../pages/teacher.php");
-        } else {
-            header("location: ../pages/student.php");
-        }
+        echo $user_type;
+        exit();
     }else{
         echo "Email or Password is wrong!";
     }

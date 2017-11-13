@@ -249,6 +249,7 @@ label p {
     -o-transition: 0.3s all;
     -ms-transition: 0.3s all;
 }
+
 /*--copy-right-ends-here--*/
 /*--responsive-design-starts-here--*/
 @media(max-width:1680px){
@@ -737,3 +738,19 @@ label p {
 	}
 }
 /*--responsive-design-ends-here--*/
+
+/*teacher and student display*/
+select {
+	color: #fff;
+	background-color: rgb(223, 87, 153);
+	border-radius: 20px;
+}
+
+.teacher_row:first-child, .student_row:first-child {
+	margin-top: 50px;
+}
+.teacher_row, .student_row {
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	margin: 10px 0px 0px 50px;
+}

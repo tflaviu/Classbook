@@ -1,24 +1,24 @@
-.logout {
-    /*padding: 9px 38px 9px 38px;*/
-    background: #fff;
-    color: #000;
-    outline: none;
-    display: block;
-    margin: 0 auto;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 55px;
-    font-weight: bold;
-    width: 120px;
-    height: 30px;
+/*.logout {*/
+    /*!*padding: 9px 38px 9px 38px;*!*/
+    /*background: #fff;*/
+    /*color: #000;*/
+    /*outline: none;*/
+    /*display: block;*/
+    /*margin: 0 auto;*/
+    /*border: none;*/
+    /*cursor: pointer;*/
+    /*font-size: 14px;*/
+    /*margin-top: 55px;*/
+    /*font-weight: bold;*/
+    /*width: 120px;*/
+    /*height: 30px;*/
 
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    transition: 0.3s all;
-    -webkit-transition: 0.3s all;
-    -moz-transition: 0.3s all;
-    -o-transition: 0.3s all;
-    -ms-transition: 0.3s all;
-}
+    /*text-align: center;*/
+    /*text-transform: uppercase;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*transition: 0.3s all;*/
+    /*-webkit-transition: 0.3s all;*/
+    /*-moz-transition: 0.3s all;*/
+    /*-o-transition: 0.3s all;*/
+    /*-ms-transition: 0.3s all;*/
+/*}*/

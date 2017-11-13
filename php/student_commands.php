@@ -8,7 +8,8 @@
 
 include_once "../php/connect.php";
 
-function show_grades() {
+function show_grades()
+{
     $db = dbConnect();
     $id_student = $_SESSION['id_user'];
     $sql = "SElECT g.grade, g.date, c.class_name 
@@ -18,10 +19,22 @@ function show_grades() {
             WHERE fk_student = '$id_student'
             ORDER BY c.class_name";
     $result = $db->query($sql);
-
+//    echo "<div class=\"student_row\">
+//            <span class=\"grade_span\">Class</span>
+//            <span class=\"grade_span\">Grade</span>
+//            <span class=\"grade_span\">Date</span>
+//        </div>";
     while ($row = $result->fetch_assoc()) {
-        echo "<span class=\"grade_span\">"; echo $row['class_name']; echo "</span>";
-        echo "<span class=\"grade_span\">"; echo $row['grade']; echo "</span>";
-        echo "<span class=\"grade_span\">"; echo $row['date']; echo "</span>" . "</br>";
+        echo "<div class=\"student_row\"";
+        echo "<span class=\"grade_span\">";
+        echo $row['class_name'];
+        echo "</span>";
+        echo "<span class=\"grade_span second_span\">";
+        echo $row['grade'];
+        echo "</span>";
+        echo "<span class=\"grade_span\">";
+        echo $row['date'];
+        echo "</span>";
+        echo "</div>";
     }
 }

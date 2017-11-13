@@ -6,6 +6,7 @@
     <link href="../css/header.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/home-style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../css/student.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <link href="../vendors/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
@@ -19,7 +20,6 @@
         header("Location: student.php");
         }
 
-        print_r($_SESSION['id_user']);
     include_once "../php/teacher_commands.php";
     ?>
     
@@ -33,9 +33,11 @@
     </div>
 
     <div class="main">
-        <div class="grades_div">
+        <div>
             <?php show_students(); ?>
         </div>
     </div>
+
+<?php echo check_teacher_class(); ?>
 </body>
 </html>

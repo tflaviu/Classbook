@@ -51,25 +51,31 @@ $db = dbConnect();
     echo "<form action='../php/admin_actions.php' method='post'>";
     while ($row = $result->fetch_assoc()) {
         echo "<div class=\"student_row\">";
+        echo "<span>";
         echo "<input type='checkbox' name=\"checked_student[]\" id=\"checkbox-std\" value=";
         echo $row['id_user'];
         echo "/>";
+        echo "</span>";
         echo "<select name=\"select_department[]\">";
         echo "<option value=\"dep\">Department</option>";
         $sql2 = "SELECT * FROM departments";
         $result2 = $db->query($sql2);
         while ($row2 = $result2->fetch_assoc()) {
+            echo "<span>";
             echo "<option value=\"";
             echo $row2['id_department'];
             echo "\">";
             echo $row2['department_name'];
             echo "</option>";
+            echo "</span>";
         }
         echo "</select>" . ' ';
-        echo $row['user_name'] . ' ' . $row['email'] . "<br>";
+        echo "<span class='student_span'>" . $row['user_name'] . "</span>" . ' ' . "<span class='email_span'>" . $row['email'] . "</span>";
         echo "</div>";
     }
-    echo "<input method='post' action='../php/admin_actions' name = 'stdToDep_submit' type='submit' value='Submit'/>";
+    if (mysqli_num_rows($result) > 0) {
+        echo "<input name = 'stdToDep_submit' type='submit' value='Submit'/>";
+    }
     echo "</form>";
     ?>
 </div>

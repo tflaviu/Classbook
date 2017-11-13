@@ -59,10 +59,13 @@ if ($_SESSION['loggedIn'] != true) {
             echo "</option>";
         }
         echo "</select>" . ' ';
-        echo $row['user_name'] . ' ' . $row['email'] . "<br>";
+        echo "<span class='teacher_span'>" . $row['user_name'] . "</span>" . ' ' . "<span class='email_span'>" . $row['email'] . "</span>" . "<br>";
         echo "</div>";
     }
-    echo "<input name = 'teacherToDep_submit' type='submit' value='Submit'/>";
+    if (mysqli_num_rows($result) > 0) {
+        echo "<input name = 'teacherToDep_submit' type='submit' value='Submit'/>";
+    }
+
     echo "</form>";
     ?>
 </div>

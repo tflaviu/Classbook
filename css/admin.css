@@ -62,8 +62,11 @@ html, body {
 }
 
 .logout a:hover, .back a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
     /*color: #B8B8B8;*/
-    color: #ff4d4d;
+    /*color: #ff4d4d;*/
     /*background: transparent;*/
 }
 
@@ -93,6 +96,18 @@ html, body {
     margin-left: 40%;
     margin-top: 50px;
     font-size: 1.8rem;
+}
+
+.student_span, .teacher_span {
+    text-transform: capitalize;
+}
+
+.email_span {
+    text-transform: lowercase;
+}
+
+.email_span, .student_span, .teacher_span {
+    margin-left: 10px;
 }
 
 .footer {
