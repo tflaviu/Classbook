@@ -46,11 +46,17 @@ if(isset($_POST['teacher_submit'])) {
         }
     }
 
+    if (count($student) != count($dep_array)) {
+        $_SESSION['error2'] = "Error!";
+        header("Location: ../pages/student_to_department.php");
+        die();
+    }
+
     foreach ($dep_array as $key => $n) {
         $sql = "INSERT INTO student_department (fk_department, fk_user) VALUES ('$n', '$student[$key]')";
         $result = $db->query($sql);
         if ($result) {
-            header("Location: ../pages/admin.php");
+            header("Location: ../pages/student_to_department.php");
         }
     }
 
@@ -65,11 +71,17 @@ if(isset($_POST['teacher_submit'])) {
         }
     }
 
+    if (count($teacher) != count($dep_array)) {
+        header("Location: ../pages/teacher_to_department.php");
+        $_SESSION['error'] = "Error!";
+        die();
+    }
+
     foreach ($dep_array as $key => $n) {
         $sql = "INSERT INTO teacher_department (fk_department, fk_teacher) VALUES ('$n', '$teacher[$key]')";
         $result = $db->query($sql);
         if ($result) {
-            header("Location: ../pages/admin.php");
+            header("Location: ../pages/teacher_to_department.php");
         }
     }
 

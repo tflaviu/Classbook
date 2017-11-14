@@ -77,6 +77,10 @@ $db = dbConnect();
         echo "<input name = 'stdToDep_submit' type='submit' value='Submit'/>";
     }
     echo "</form>";
+
+    if (isset($_SESSION['error2'])) {
+        echo "<div>"; echo $_SESSION['error2']; echo "</div>";
+    }
     ?>
 </div>
 </body>

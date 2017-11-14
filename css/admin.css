@@ -110,6 +110,26 @@ html, body {
     margin-left: 10px;
 }
 
+.student_row span a {
+    color: #fff;
+}
+
+.student_row span:hober {
+    background-color: #fff !important;
+}
+
+.edit a:hover, .delete a:hover {
+    background-color: transparent;
+}
+
+.edit a:hover{
+    color: green;
+}
+
+.delete a:hover{
+    color: red;
+}
+
 .footer {
     height: 50px;
     margin-top: -50px;
