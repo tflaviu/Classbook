@@ -42,6 +42,8 @@ include_once "../php/teacher_commands.php";
         <span class="unselectable">Commands</span>
         <div class="dropdown-content">
             <button onclick="location.href = 'teacher.php';" class="addTeacherToDep">Home</button>
+            <button onclick="location.href = 'graded_students.php';" class="addTeacherToDep">Graded students
+            </button>
             <button onclick="location.href = 'ungraded_students.php';" class="addTeacherToDep">Ungraded students
             </button>
         </div>

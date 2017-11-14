@@ -35,6 +35,7 @@ include_once "../php/teacher_commands.php";
         <div class="dropdown-content">
             <button onclick="location.href = 'admin.php';" class="addTeacherToDep">Home</button>
             <button onclick="location.href = 'graded_students.php';" class="addTeacherToDep">Graded students</button>
+            <button onclick="location.href = 'ungraded_students.php';" class="addTeacherToDep">Ungraded students</button>
         </div>
     </div>
     <div class="logout">

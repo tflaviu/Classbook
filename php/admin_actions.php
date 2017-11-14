@@ -35,57 +35,8 @@ if(isset($_POST['teacher_submit'])) {
     if ($result) {
         header("Location: ../pages/admin.php");
     }
-} elseif (isset($_POST['stdToDep_submit'])) {
-    $student = $_POST['checked_student'];
-    $department = $_POST['select_department'];
 
-    $dep_array = array();
-    foreach( $department as $key => $n ) {
-        if ($n != "dep") {
-            array_push ($dep_array, $n);
-        }
-    }
-
-    if (count($student) != count($dep_array)) {
-        $_SESSION['error2'] = "Error!";
-        header("Location: ../pages/student_to_department.php");
-        die();
-    }
-
-    foreach ($dep_array as $key => $n) {
-        $sql = "INSERT INTO student_department (fk_department, fk_user) VALUES ('$n', '$student[$key]')";
-        $result = $db->query($sql);
-        if ($result) {
-            header("Location: ../pages/student_to_department.php");
-        }
-    }
-
-} elseif (isset($_POST['teacherToDep_submit'])) {
-    $teacher = $_POST['checked_teacher'];
-    $department = $_POST['select_department'];
-
-    $dep_array = array();
-    foreach( $department as $key => $n ) {
-        if ($n != "dep") {
-            array_push ($dep_array, $n);
-        }
-    }
-
-    if (count($teacher) != count($dep_array)) {
-        header("Location: ../pages/teacher_to_department.php");
-        $_SESSION['error'] = "Error!";
-        die();
-    }
-
-    foreach ($dep_array as $key => $n) {
-        $sql = "INSERT INTO teacher_department (fk_department, fk_teacher) VALUES ('$n', '$teacher[$key]')";
-        $result = $db->query($sql);
-        if ($result) {
-            header("Location: ../pages/teacher_to_department.php");
-        }
-    }
-
-} elseif (isset($_POST['student_submit'])) {
+}  elseif (isset($_POST['student_submit'])) {
     $name = $_POST['student_name'];
     $email = $_POST['student_email'];
     $password = $_POST['student_password'];

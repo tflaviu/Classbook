@@ -110,13 +110,11 @@ if (isset($_POST['grade_submit'])) {
     include_once "../php/connect.php";
 
     $db = dbConnect();
-    if (!isset($_POST['student']) && !isset($_POST['grade'])) {
-        $err = "Error"; ?>
+    if (!isset($_POST['student']) && !isset($_POST['grade'])) { ?>
         <script>
-            swal("Here's the title!", "...and here's the text!");
+            swal("Error!", "Looks like you didn't check a student or grade!");
         </script>
         <?php
-//        header("Location: ../pages/ungraded_students.php");
     } else {
         $student = $_POST['student'];
         $grade = $_POST['grade_input'];
@@ -128,32 +126,24 @@ if (isset($_POST['grade_submit'])) {
             }
         }
 
-        //selecteaza clasa profesorului logat
-//    $class_sql = "SELECT c.id_class
-//                  FROM ( classes c
-//                  INNER JOIN teacher_department td ON c.fk_teacher = td.fk_teacher)";
-
-//    $class_result = $db->query($class_sql);
-//    $class_row = $class_result->fetch_assoc();
-//    $class = $class_row['id_class'];
-
         if (count($grade_array) < count($student)) { ?>
             <script>
-                swal("Error!", "Looks like you forgot a grade!");
+                swal("Error!", "Looks like you didn't check a student or grade!");
             </script>
-        <?php } else if (count($grade_array) < count($student)) { ?>
+        <?php } else if (count($grade_array) > count($student)) { ?>
             <script>
-                swal("Error!", "Looks like you forgot a student!");
+                swal("Error!", "Looks like you didn't check a student or grade!");
             </script>
-        <?php }
+        <?php } else {
 
-        $class = check_teacher_class();
+            $class = check_teacher_class();
 
-        foreach ($grade_array as $key => $n) {
-            $sql = "INSERT INTO grades (fk_student, grade, fk_class) VALUES ('$student[$key]', '$n', '$class')";
-            $result = $db->query($sql);
-            if ($result) {
-                $data = 1;
+            foreach ($grade_array as $key => $n) {
+                $sql = "INSERT INTO grades (fk_student, grade, fk_class) VALUES ('$student[$key]', '$n', '$class')";
+                $result = $db->query($sql);
+                if ($result) {
+                    $data = 1;
+                }
             }
         }
     }
@@ -168,7 +158,7 @@ function updateGrade($id_user, $grade)
             WHERE fk_student = '$id_user'";
     $result = $db->query($sql);
     if ($result) {
-        header("Location: header");
+        header("Location: ../php/grade_edit.php?id=$id_user");
     } else {
         echo "Error";
     }
@@ -204,7 +194,9 @@ function deleteGrade($id_user)
 
     if ($result) {
         header("Location: ../pages/graded_students.php");
-    } else {
-        echo "Error";
-    }
+    } else { ?>
+        <script>
+            swal("Error!", "Something went wrong!");
+        </script>
+    <?php }
 }

@@ -12,6 +12,7 @@
     <link href="../vendors/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../vendors/jquery-3.2.1.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 
@@ -41,7 +42,7 @@ if ($_SESSION['loggedIn'] != true) {
 
     $sql = "SELECT id_user, user_name, email FROM users WHERE user_type = '1' AND id_user NOT IN ( SELECT fk_teacher FROM teacher_department )";
     $result = $db->query($sql);
-    echo "<form action='../php/admin_actions.php' method='post'>";
+    echo "<form action='' method='post'>";
     while ($row = $result->fetch_assoc()) {
         echo "<div class=\"teacher_row\">";
         echo "<input type='checkbox' name=\"checked_teacher[]\" value=";
@@ -68,10 +69,37 @@ if ($_SESSION['loggedIn'] != true) {
 
     echo "</form>";
 
-    if (isset($_SESSION['error2'])) {
-        echo "<div>"; echo $_SESSION['error2']; echo "</div>";
-    }
-    ?>
+    if (isset($_POST['teacherToDep_submit'])) {
+        if (!isset($_POST['checked_teacher']) || !isset($_POST['select_department'])) { ?>
+            <script>swal("Error!", "Looks like you didn't check a student or department!");</script>
+        <?php die();
+        } else {
+        $teacher = $_POST['checked_teacher'];
+        $department = $_POST['select_department'];
+
+        $dep_array = array();
+        foreach ($department as $key => $n) {
+            if ($n != "dep") {
+                array_push($dep_array, $n);
+            }
+        }
+
+        if (count($teacher) != count($dep_array)) { ?>
+            <script>swal("Error!", "Looks like you didn't check a student or department!");</script>
+            <?php $_SESSION['error'] = "Error!";
+            die();
+        } else {
+
+            foreach ($dep_array as $key => $n) {
+                $sql = "INSERT INTO teacher_department (fk_department, fk_teacher) VALUES ('$n', '$teacher[$key]')";
+                $result = $db->query($sql);
+                if ($result) {
+                    header("Location: teacher_to_department.php");
+                }
+            }
+        }
+        }
+    } ?>
 </div>
 </body>
 </html>
