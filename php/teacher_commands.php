@@ -7,12 +7,10 @@
  * Time: 15:40
  */
 
-function check_teacher_class()
+function check_teacher_class($id_teacher)
 {
     include_once "../php/connect.php";
     $db = dbConnect();
-//    $id_teacher = $_SESSION['id_user'];
-    $id_teacher = 6;
     $class_sql = "SELECT c.id_class
                   FROM ( classes c
                   INNER JOIN teacher_department td ON c.fk_teacher = td.fk_teacher)
@@ -29,7 +27,7 @@ function show_graded_students()
 {
     include_once "../php/connect.php";
     $db = dbConnect();
-    $class = check_teacher_class();
+    $class = check_teacher_class($_SESSION['id_user']);
 
     $gradedStudent_sql = "SELECT g.id_grade, g.grade, u.id_user, u.user_name, u.email
                           FROM (grades g
@@ -52,7 +50,7 @@ function show_students()
 
     $db = dbConnect();
     $id_teacher = $_SESSION['id_user'];
-    $class = check_teacher_class();
+    $class = check_teacher_class($id_teacher);
     $gradedStudent_sql = "SELECT * FROM grades WHERE fk_class = '$class'";
     $gradedStudent_result = $db->query($gradedStudent_sql);
 
@@ -137,7 +135,7 @@ function submit_grade($type, $student, $grade)
         }
     } else {
 
-        $class = check_teacher_class();
+        $class = check_teacher_class($_SESSION['id_user']);
 
         foreach ($grade_array as $key => $n) {
             $sql = "INSERT INTO grades (fk_student, grade, fk_class) VALUES ('$student[$key]', '$n', '$class')";
@@ -167,7 +165,6 @@ if (isset($_POST['grade_submit'])) {
         submit_grade("web", $student, $grade);
     }
 }
-
 
 function updateGrade($type, $id_student, $new_grade)
 {
