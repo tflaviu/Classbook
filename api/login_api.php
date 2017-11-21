@@ -5,7 +5,7 @@
  * Date: 18.11.2017
  * Time: 23:16
  */
-include_once "../php/login_function.php";
+include_once "../php/auth_function.php";
 $type = 'api';
 //$user = "student@student.ro";
 //$password = "Student123";

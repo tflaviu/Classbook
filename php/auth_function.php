@@ -5,20 +5,18 @@
  * Date: 20.11.2017
  * Time: 11:53
  */
+include_once "connect.php";
 
-function login($type, $email_api, $password_api)
+function login($type, $email, $password)
 {
-    include_once "connect.php";
-
     $db = dbConnect();
-
-    if (!empty($_POST['email1']) && !empty( $_POST['password1'])) {
-        $email = $_POST['email1'];
-        $password = $_POST['password1'];
-    } else {
-        $email = $email_api;
-        $password = $password_api;
-    }
+//    if (!empty($_POST['email1']) && !empty( $_POST['password1'])) {
+//        $email = $_POST['email1'];
+//        $password = $_POST['password1'];
+//    } else {
+//        $email = $email_api;
+//        $password = $password_api;
+//    }
 //    $email = $_POST['email1'];
 //    $password = $_POST['password1'];
     $email = filter_var($email, FILTER_SANITIZE_EMAIL); // sanitizing email(Remove unexpected symbol like <,>,?,#,!, etc.)
@@ -45,7 +43,7 @@ function login($type, $email_api, $password_api)
                 echo $user_type;
             } else if ($type == 'api') {
                 $session_array = [
-                    "loggedEmail"=>$_SESSION['loggedEmail'],
+                    "loggedEmail" => $_SESSION['loggedEmail'],
                     "loggedIn" => $_SESSION['loggedIn'],
                     "user_type" => $_SESSION['user_type'],
                     "user_name" => $_SESSION['user_name'],
@@ -55,6 +53,33 @@ function login($type, $email_api, $password_api)
             exit();
         } else {
             echo "Email or Password is wrong!";
+        }
+    }
+}
+
+function register($type, $user_name, $email, $password, $confirm_password)
+{
+    $db = dbConnect();
+    if ($password != $confirm_password) {
+        echo "Passwords don't match!";
+        die;
+    } else {
+        $sql = "INSERT INTO users (user_name, email, password, user_type) VALUES ('$user_name', '$email', '$password', '2')";
+        $result = $db->query($sql);
+
+        if ($result) {
+            if ($type == 'web') {
+                session_start();
+                $_SESSION['loggedEmail'] = $email;
+                $_SESSION['loggedIn'] = true;
+                header("Location: ../pages/student.php");
+            } else if ($type == 'api') {
+                $arr = ["logged_email" => $email, "loggedIn" => "true", "success" => "true"];
+                echo json_encode($arr);
+            }
+
+        } else {
+            echo "Error";
         }
     }
 }

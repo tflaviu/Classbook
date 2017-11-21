@@ -43,11 +43,6 @@ function show_graded_students()
     }
 
     return $gradedStudent_array;
-
-//    foreach ($gradedStudent_array as $key => $n) {
-//        echo $n;
-//    }
-
 }
 
 function show_students()
@@ -149,12 +144,12 @@ if (isset($_POST['grade_submit'])) {
     }
 }
 
-function updateGrade($id_user, $grade)
+function updateGrade($type, $id_user, $new_grade)
 {
     include_once "../php/connect.php";
     $db = dbConnect();
     $sql = "UPDATE grades
-            SET grade='$grade'
+            SET grade='$new_grade'
             WHERE fk_student = '$id_user'";
     $result = $db->query($sql);
     if ($result) {
@@ -199,4 +194,34 @@ function deleteGrade($id_user)
             swal("Error!", "Something went wrong!");
         </script>
     <?php }
+}
+
+function showStudents($id_teacher)
+{
+    include_once "connect.php";
+    $db = dbConnect();
+
+    $sql = "SELECT u.id_user, u.user_name, u.email
+                          FROM ((teacher_department td
+                          INNER JOIN student_department sd ON td.fk_department = sd.fk_department)
+                          INNER JOIN users u ON sd.fk_user = u.id_user)
+                          WHERE fk_teacher = '$id_teacher'";
+
+    $result = $db->query($sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        $arr = [];
+        $i = 0;
+        while ($row = $result->fetch_assoc()) {
+            $arr[$i] = [
+                "id_user" => $row['id_user'],
+                "user_name" => $row['user_name'],
+                "email" => $row['email']];
+            $i++;
+        }
+        echo json_encode($arr);
+    } else {
+        echo "No classes found!";
+    }
+
 }

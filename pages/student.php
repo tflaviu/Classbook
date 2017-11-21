@@ -32,7 +32,7 @@ include_once "../php/student_commands.php";
 
     <div class="main">
         <div class="grades_div">
-            <?php show_grades(); ?>
+            <?php show_grades("web", $_SESSION['id_user']); ?>
         </div>
     </div>
 </body>
