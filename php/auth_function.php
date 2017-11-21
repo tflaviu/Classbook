@@ -42,17 +42,24 @@ function login($type, $email, $password)
             if ($type == 'web') {
                 echo $user_type;
             } else if ($type == 'api') {
-                $session_array = [
+                $data = [
                     "loggedEmail" => $_SESSION['loggedEmail'],
                     "loggedIn" => $_SESSION['loggedIn'],
                     "user_type" => $_SESSION['user_type'],
                     "user_name" => $_SESSION['user_name'],
                     "id_user" => $_SESSION['id_user']];
-                echo json_encode($session_array);
+                $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+                echo json_encode($respone);
             }
             exit();
         } else {
-            echo "Email or Password is wrong!";
+            if ($type == 'web') {
+                echo "Email or Password is wrong!";
+            } else if ($type == 'api') {
+                $data = '';
+                $respone = ['status' => ['success' => false, 'error' => 'Email or password is wrong'], 'data' => $data];
+                echo json_encode($respone);
+            }
         }
     }
 }
@@ -61,7 +68,14 @@ function register($type, $user_name, $email, $password, $confirm_password)
 {
     $db = dbConnect();
     if ($password != $confirm_password) {
-        echo "Passwords don't match!";
+        if ($type == 'web') {
+            echo "Passwords don't match!";
+        } else if ($type == 'api') {
+            $data = '';
+            $respone = ['status' => ['success' => false, 'error' => 'Passwords don\'t match'], 'data' => $data];
+            echo json_encode($respone);
+        }
+
         die;
     } else {
         $sql = "INSERT INTO users (user_name, email, password, user_type) VALUES ('$user_name', '$email', '$password', '2')";
@@ -74,12 +88,24 @@ function register($type, $user_name, $email, $password, $confirm_password)
                 $_SESSION['loggedIn'] = true;
                 header("Location: ../pages/student.php");
             } else if ($type == 'api') {
-                $arr = ["logged_email" => $email, "loggedIn" => "true", "success" => "true"];
-                echo json_encode($arr);
+//                $arr = ["logged_email" => $email, "loggedIn" => "true", "success" => "true"];
+//                echo json_encode($arr);
+                $data = [
+                    "loggedEmail" => $email,
+                    "loggedIn" => true,
+                    ];
+                $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+                echo json_encode($respone);
             }
 
         } else {
-            echo "Error";
+            if ($type == 'web') {
+                echo "Error";
+            } else if ($type == 'api') {
+                $data = '';
+                $respone = ['status' => ['success' => false, 'error' => ''], 'data' => $data];
+                echo json_encode($respone);
+            }
         }
     }
 }

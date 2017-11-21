@@ -11,7 +11,8 @@ function check_teacher_class()
 {
     include_once "../php/connect.php";
     $db = dbConnect();
-    $id_teacher = $_SESSION['id_user'];
+//    $id_teacher = $_SESSION['id_user'];
+    $id_teacher = 6;
     $class_sql = "SELECT c.id_class
                   FROM ( classes c
                   INNER JOIN teacher_department td ON c.fk_teacher = td.fk_teacher)
@@ -101,10 +102,60 @@ function show_students()
 
 }
 
-if (isset($_POST['grade_submit'])) {
+function submit_grade($type, $student, $grade)
+{
     include_once "../php/connect.php";
 
     $db = dbConnect();
+
+    $grade_array = array();
+    foreach ($grade as $key => $n) {
+        if ($n != "") {
+            array_push($grade_array, $n);
+        }
+    }
+
+    if (count($grade_array) < count($student)) {
+        if ($type == 'web') { ?>
+            <script>
+                swal("Error!", "Looks like you didn't check a student or grade!");
+            </script>
+        <?php } else if ($type == 'api') {
+            $data = '';
+            $respone = ['status' => ['success' => false, 'error' => 'Looks like you didn\'t check a student or grade'], 'data' => $data];
+            echo json_encode($respone);
+        }
+    } else if (count($grade_array) > count($student)) {
+        if ($type == 'web') { ?>
+            <script>
+                swal("Error!", "Looks like you didn't check a student or grade!");
+            </script>
+        <?php } else if ($type == 'api') {
+            $data = '';
+            $respone = ['status' => ['success' => false, 'error' => 'Looks like you didn\'t check a student or grade'], 'data' => $data];
+            echo json_encode($respone);
+        }
+    } else {
+
+        $class = check_teacher_class();
+
+        foreach ($grade_array as $key => $n) {
+            $sql = "INSERT INTO grades (fk_student, grade, fk_class) VALUES ('$student[$key]', '$n', '$class')";
+            $result = $db->query($sql);
+            if ($result) {
+                if ($type == 'web') {
+                    $data = 1;
+                } else if ($type == 'api') {
+                    $data = '';
+                    $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+                    echo json_encode($respone);
+                }
+            }
+        }
+    }
+}
+
+if (isset($_POST['grade_submit'])) {
     if (!isset($_POST['student']) && !isset($_POST['grade'])) { ?>
         <script>
             swal("Error!", "Looks like you didn't check a student or grade!");
@@ -113,49 +164,36 @@ if (isset($_POST['grade_submit'])) {
     } else {
         $student = $_POST['student'];
         $grade = $_POST['grade_input'];
-
-        $grade_array = array();
-        foreach ($grade as $key => $n) {
-            if ($n != "") {
-                array_push($grade_array, $n);
-            }
-        }
-
-        if (count($grade_array) < count($student)) { ?>
-            <script>
-                swal("Error!", "Looks like you didn't check a student or grade!");
-            </script>
-        <?php } else if (count($grade_array) > count($student)) { ?>
-            <script>
-                swal("Error!", "Looks like you didn't check a student or grade!");
-            </script>
-        <?php } else {
-
-            $class = check_teacher_class();
-
-            foreach ($grade_array as $key => $n) {
-                $sql = "INSERT INTO grades (fk_student, grade, fk_class) VALUES ('$student[$key]', '$n', '$class')";
-                $result = $db->query($sql);
-                if ($result) {
-                    $data = 1;
-                }
-            }
-        }
+        submit_grade("web", $student, $grade);
     }
 }
 
-function updateGrade($type, $id_user, $new_grade)
+
+function updateGrade($type, $id_student, $new_grade)
 {
     include_once "../php/connect.php";
     $db = dbConnect();
     $sql = "UPDATE grades
             SET grade='$new_grade'
-            WHERE fk_student = '$id_user'";
+            WHERE fk_student = '$id_student'";
     $result = $db->query($sql);
     if ($result) {
-        header("Location: ../php/grade_edit.php?id=$id_user");
+        if ($type == "web") {
+            header("Location: ../php/grade_edit.php?id=$id_student");
+        } else if ($type == 'api') {
+            $data = '';
+            $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+            echo json_encode($respone);
+        }
     } else {
-        echo "Error";
+        if ($type == 'web') {
+            echo "Error";
+        } else if ($type == 'api') {
+            $data = '';
+            $respone = ['status' => ['success' => false, 'error' => 'Error updating grade'], 'data' => $data];
+            echo json_encode($respone);
+        }
+
     }
 }
 
@@ -210,18 +248,22 @@ function showStudents($id_teacher)
     $result = $db->query($sql);
 
     if (mysqli_num_rows($result) > 0) {
-        $arr = [];
+        $data = [];
         $i = 0;
         while ($row = $result->fetch_assoc()) {
-            $arr[$i] = [
+            $data[$i] = [
                 "id_user" => $row['id_user'],
                 "user_name" => $row['user_name'],
                 "email" => $row['email']];
             $i++;
         }
-        echo json_encode($arr);
+        $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+        echo json_encode($respone);
+
     } else {
-        echo "No classes found!";
+        $data = ["message" => 'No classes found!'];
+        $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+        echo json_encode($respone);
     }
 
 }

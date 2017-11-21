@@ -33,8 +33,9 @@ function show_grades($type, $id_student)
             echo "</span>";
             echo "</div>";
         } else if ($type = 'api') {
-            $arr = ['class_name' => $row['class_name'], 'grade' => $row['grade']];
-            echo json_encode($arr);
+            $data = ["class_name" => $row['class_name'], "grade" => $row['grade']];
+            $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+            echo json_encode($respone);
         }
     }
 
@@ -54,7 +55,9 @@ function show_classes($type, $id_student)
 
     if (mysqli_num_rows($result) > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo json_encode(["class" => $row['class_name']]);
+            $data = ["class" => $row['class_name']];
+            $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+            echo json_encode($respone);
         }
     } else {
         echo "No classes found!";

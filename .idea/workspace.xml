@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5bb5496-f705-4663-95ac-a56b0129f7f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/classes_api.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/edit_grade_api.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/grades_api.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/show_students_api.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/php/login_function.php" afterPath="$PROJECT_DIR$/php/auth_function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/submit_grade_api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/login_api.php" afterPath="$PROJECT_DIR$/api/login_api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/register_api.php" afterPath="$PROJECT_DIR$/api/register_api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/student.php" afterPath="$PROJECT_DIR$/pages/student.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/login.php" afterPath="$PROJECT_DIR$/php/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/register.php" afterPath="$PROJECT_DIR$/php/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/classes_api.php" afterPath="$PROJECT_DIR$/api/classes_api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/edit_grade_api.php" afterPath="$PROJECT_DIR$/api/edit_grade_api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/grades_api.php" afterPath="$PROJECT_DIR$/api/grades_api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/auth_function.php" afterPath="$PROJECT_DIR$/php/auth_function.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/student_commands.php" afterPath="$PROJECT_DIR$/php/student_commands.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/teacher_commands.php" afterPath="$PROJECT_DIR$/php/teacher_commands.php" />
     </list>
@@ -28,7 +23,7 @@
       <file leaf-file-name="admin_actions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/admin_actions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="807">
+            <state relative-caret-position="874">
               <caret line="38" column="2" lean-forward="false" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
               <folding>
                 <marker date="1510666455259" expanded="true" signature="306:323" ph="INSERT INTO users... " />
@@ -46,44 +41,84 @@
       <file leaf-file-name="teacher_commands.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/teacher_commands.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="146" column="28" lean-forward="false" selection-start-line="146" selection-start-column="28" selection-end-line="146" selection-end-column="28" />
+            <state relative-caret-position="370">
+              <caret line="117" column="31" lean-forward="false" selection-start-line="117" selection-start-column="31" selection-end-line="117" selection-end-column="31" />
               <folding>
                 <element signature="n#check_teacher_class#0;n#!!top" expanded="false" />
                 <element signature="n#show_graded_students#0;n#!!top" expanded="false" />
                 <element signature="n#show_students#0;n#!!top" expanded="false" />
-                <element signature="e#3270#4598#0#PHP" expanded="false" />
+                <element signature="n#updateGrade#0;n#!!top" expanded="false" />
                 <element signature="n#showStudentDetails#0;n#!!top" expanded="false" />
                 <element signature="n#deleteGrade#0;n#!!top" expanded="false" />
                 <element signature="n#showStudents#0;n#!!top" expanded="false" />
-                <marker date="1511268078526" expanded="true" signature="319:455" ph="SELECT c.id_... classes" />
-                <marker date="1511268078526" expanded="true" signature="319:494" ph="SELECT c.id_... classes" />
-                <marker date="1511268078526" expanded="true" signature="319:496" ph="SELECT c.id_... classes" />
-                <marker date="1511268078526" expanded="true" signature="319:508" ph="SELECT c.id_... classes" />
-                <marker date="1511268078526" expanded="true" signature="822:1040" ph="SELECT id_gr... grades" />
-                <marker date="1511268078526" expanded="true" signature="822:1048" ph="SELECT g.id_... grades" />
-                <marker date="1511268078526" expanded="true" signature="1581:1627" ph="SELECT * FRO... grades" />
-                <marker date="1511268078526" expanded="true" signature="1866:2132" ph="SELECT u.id_... teacher_department" />
-                <marker date="1511268078526" expanded="true" signature="1866:2133" ph="SELECT u.id_... teacher_department" />
-                <marker date="1511268078526" expanded="true" signature="1905:2132" ph="SELECT u.use... teacher_department" />
-                <marker date="1511268078526" expanded="true" signature="4350:4432" ph="INSERT INTO grades... " />
-                <marker date="1511268078526" expanded="true" signature="4350:4440" ph="INSERT INTO teacher_department... " />
-                <marker date="1511268078526" expanded="true" signature="4726:4774" ph="UPDATE grade... " />
-                <marker date="1511268078526" expanded="true" signature="4726:4816" ph="UPDATE grade... " />
-                <marker date="1511268078526" expanded="true" signature="5092:5263" ph="SELECT u.id_... " />
-                <marker date="1511268078526" expanded="true" signature="5584:5632" ph="DELETE FROM " />
-                <marker date="1511268078526" expanded="true" signature="5969:6292" ph="SELECT u.id_... teacher_department" />
+                <marker date="1511275010100" expanded="true" signature="342:478" ph="SELECT c.id_... classes" />
+                <marker date="1511275010100" expanded="true" signature="342:517" ph="SELECT c.id_... classes" />
+                <marker date="1511275010100" expanded="true" signature="342:519" ph="SELECT c.id_... classes" />
+                <marker date="1511275010100" expanded="true" signature="342:531" ph="SELECT c.id_... classes" />
+                <marker date="1511275010100" expanded="true" signature="845:1063" ph="SELECT id_gr... grades" />
+                <marker date="1511275010100" expanded="true" signature="845:1071" ph="SELECT g.id_... grades" />
+                <marker date="1511275010100" expanded="true" signature="1604:1650" ph="SELECT * FRO... grades" />
+                <marker date="1511275010100" expanded="true" signature="1889:2155" ph="SELECT u.id_... teacher_department" />
+                <marker date="1511275010100" expanded="true" signature="1889:2156" ph="SELECT u.id_... teacher_department" />
+                <marker date="1511275010100" expanded="true" signature="1928:2155" ph="SELECT u.use... teacher_department" />
+                <marker date="1511275010100" expanded="true" signature="4125:4147" ph="..." />
+                <marker date="1511275010100" expanded="true" signature="4609:4699" ph="INSERT INTO grades... " />
+                <marker date="1511275010100" expanded="true" signature="5621:5669" ph="UPDATE grade... " />
+                <marker date="1511275010100" expanded="true" signature="5621:5714" ph="UPDATE grade... " />
+                <marker date="1511275010100" expanded="true" signature="6485:6656" ph="SELECT u.id_... " />
+                <marker date="1511275010100" expanded="true" signature="6977:7025" ph="DELETE FROM " />
+                <marker date="1511275010100" expanded="true" signature="7362:7685" ph="SELECT u.id_... teacher_department" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_grade_api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="submit_grade_api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/submit_grade_api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_grade_api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/edit_grade_api.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student_commands.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/student_commands.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+              <folding>
+                <element signature="e#6#88#0#PHP" expanded="true" />
+                <element signature="n#show_grades#0;n#!!top" expanded="false" />
+                <element signature="n#show_classes#0;n#!!top" expanded="false" />
+                <marker date="1511273939845" expanded="true" signature="246:510" ph="SElECT g.gra... grades" />
+                <marker date="1511273939845" expanded="true" signature="1382:1629" ph="SElECT c.cla... grades" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth_function.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/auth_function.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="106" column="43" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="106" selection-end-column="43" />
+              <folding>
+                <element signature="n#login#0;n#!!top" expanded="false" />
+                <marker date="1511274592110" expanded="true" signature="826:891" ph="SELECT * FRO... users" />
+                <marker date="1511274592110" expanded="true" signature="2987:3094" ph="INSERT INTO users... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,6 +128,36 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
               <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register_api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/register_api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grades_api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/grades_api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="classes_api.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/classes_api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -110,7 +175,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>depart</find>
       <find>email</find>
       <find>br</find>
       <find>NOT INT</find>
@@ -140,6 +204,7 @@
       <find>error</find>
       <find>err</find>
       <find>echo</find>
+      <find>submit</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -166,7 +231,6 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/login.js" />
         <option value="$PROJECT_DIR$/php/grade_delete.php" />
-        <option value="$PROJECT_DIR$/pages/teacher.php" />
         <option value="$PROJECT_DIR$/css/admin.css" />
         <option value="$PROJECT_DIR$/pages/test.php" />
         <option value="$PROJECT_DIR$/pages/graded_students.php" />
@@ -188,16 +252,18 @@
         <option value="$PROJECT_DIR$/api/login_api.php" />
         <option value="$PROJECT_DIR$/php/login.php" />
         <option value="$PROJECT_DIR$/api/register_api.php" />
-        <option value="$PROJECT_DIR$/php/auth_function.php" />
         <option value="$PROJECT_DIR$/php/register.php" />
         <option value="$PROJECT_DIR$/pages/student.php" />
         <option value="$PROJECT_DIR$/api/student_api/grades_api.php" />
-        <option value="$PROJECT_DIR$/api/grades_api.php" />
-        <option value="$PROJECT_DIR$/php/student_commands.php" />
-        <option value="$PROJECT_DIR$/api/classes_api.php" />
         <option value="$PROJECT_DIR$/api/test2.php" />
-        <option value="$PROJECT_DIR$/php/teacher_commands.php" />
+        <option value="$PROJECT_DIR$/pages/teacher.php" />
         <option value="$PROJECT_DIR$/api/edit_grade_api.php" />
+        <option value="$PROJECT_DIR$/api/submit_grade_api.php" />
+        <option value="$PROJECT_DIR$/php/student_commands.php" />
+        <option value="$PROJECT_DIR$/php/auth_function.php" />
+        <option value="$PROJECT_DIR$/php/teacher_commands.php" />
+        <option value="$PROJECT_DIR$/api/grades_api.php" />
+        <option value="$PROJECT_DIR$/api/classes_api.php" />
       </list>
     </option>
   </component>
@@ -242,6 +308,11 @@
               <item name="Classbook" type="b2602c69:ProjectViewProjectNode" />
               <item name="Classbook" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Classbook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Classbook" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Classbook" type="b2602c69:ProjectViewProjectNode" />
@@ -319,12 +390,12 @@
       <workItem from="1510924742874" duration="4459000" />
       <workItem from="1511039575032" duration="3407000" />
       <workItem from="1511165269880" duration="14632000" />
-      <workItem from="1511262051717" duration="5900000" />
+      <workItem from="1511262051717" duration="13253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192246000" />
+    <option name="totallyTimeSpent" value="199599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
@@ -358,18 +429,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -492,14 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/ungraded_students.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="37" column="98" lean-forward="false" selection-start-line="37" selection-start-column="98" selection-end-line="37" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/grade_edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -580,14 +636,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/register_function.php" />
-    <entry file="file://$PROJECT_DIR$/api/register_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -598,42 +646,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/teacher.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/classes_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/grades_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="12" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/student.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
           <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/login_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -646,35 +662,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/student_commands.php">
+    <entry file="file://$PROJECT_DIR$/pages/teacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
-            <element signature="n#show_grades#0;n#!!top" expanded="false" />
-            <element signature="n#show_classes#0;n#!!top" expanded="false" />
-            <marker date="1511264166063" expanded="true" signature="246:510" ph="SElECT g.gra... grades" />
-            <marker date="1511264166063" expanded="true" signature="1287:1534" ph="SElECT c.cla... grades" />
-          </folding>
+        <state relative-caret-position="552">
+          <caret line="44" column="49" lean-forward="false" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/auth_function.php">
+    <entry file="file://$PROJECT_DIR$/pages/ungraded_students.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="50" column="49" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="n#register#0;n#!!top" expanded="false" />
-            <marker date="1511181460922" expanded="true" signature="826:891" ph="SELECT * FRO... users" />
-            <marker date="1511181460922" expanded="true" signature="2363:2470" ph="INSERT INTO users... " />
-          </folding>
+        <state relative-caret-position="215">
+          <caret line="37" column="98" lean-forward="false" selection-start-line="37" selection-start-column="98" selection-end-line="37" selection-end-column="98" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/admin_actions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
+        <state relative-caret-position="874">
           <caret line="38" column="2" lean-forward="false" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
           <folding>
             <marker date="1510666455259" expanded="true" signature="306:323" ph="INSERT INTO users... " />
@@ -688,6 +694,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/login_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/register_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/show_students_api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -696,35 +718,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/teacher_commands.php">
+    <entry file="file://$PROJECT_DIR$/php/auth_function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="106" column="43" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="106" selection-end-column="43" />
+          <folding>
+            <element signature="n#login#0;n#!!top" expanded="false" />
+            <marker date="1511274592110" expanded="true" signature="826:891" ph="SELECT * FRO... users" />
+            <marker date="1511274592110" expanded="true" signature="2987:3094" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/student_commands.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
-          <caret line="146" column="28" lean-forward="false" selection-start-line="146" selection-start-column="28" selection-end-line="146" selection-end-column="28" />
+          <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
           <folding>
-            <element signature="n#check_teacher_class#0;n#!!top" expanded="false" />
-            <element signature="n#show_graded_students#0;n#!!top" expanded="false" />
-            <element signature="n#show_students#0;n#!!top" expanded="false" />
-            <element signature="e#3270#4598#0#PHP" expanded="false" />
-            <element signature="n#showStudentDetails#0;n#!!top" expanded="false" />
-            <element signature="n#deleteGrade#0;n#!!top" expanded="false" />
-            <element signature="n#showStudents#0;n#!!top" expanded="false" />
-            <marker date="1511268078526" expanded="true" signature="319:455" ph="SELECT c.id_... classes" />
-            <marker date="1511268078526" expanded="true" signature="319:494" ph="SELECT c.id_... classes" />
-            <marker date="1511268078526" expanded="true" signature="319:496" ph="SELECT c.id_... classes" />
-            <marker date="1511268078526" expanded="true" signature="319:508" ph="SELECT c.id_... classes" />
-            <marker date="1511268078526" expanded="true" signature="822:1040" ph="SELECT id_gr... grades" />
-            <marker date="1511268078526" expanded="true" signature="822:1048" ph="SELECT g.id_... grades" />
-            <marker date="1511268078526" expanded="true" signature="1581:1627" ph="SELECT * FRO... grades" />
-            <marker date="1511268078526" expanded="true" signature="1866:2132" ph="SELECT u.id_... teacher_department" />
-            <marker date="1511268078526" expanded="true" signature="1866:2133" ph="SELECT u.id_... teacher_department" />
-            <marker date="1511268078526" expanded="true" signature="1905:2132" ph="SELECT u.use... teacher_department" />
-            <marker date="1511268078526" expanded="true" signature="4350:4432" ph="INSERT INTO grades... " />
-            <marker date="1511268078526" expanded="true" signature="4350:4440" ph="INSERT INTO teacher_department... " />
-            <marker date="1511268078526" expanded="true" signature="4726:4774" ph="UPDATE grade... " />
-            <marker date="1511268078526" expanded="true" signature="4726:4816" ph="UPDATE grade... " />
-            <marker date="1511268078526" expanded="true" signature="5092:5263" ph="SELECT u.id_... " />
-            <marker date="1511268078526" expanded="true" signature="5584:5632" ph="DELETE FROM " />
-            <marker date="1511268078526" expanded="true" signature="5969:6292" ph="SELECT u.id_... teacher_department" />
+            <element signature="e#6#88#0#PHP" expanded="true" />
+            <element signature="n#show_grades#0;n#!!top" expanded="false" />
+            <element signature="n#show_classes#0;n#!!top" expanded="false" />
+            <marker date="1511273939845" expanded="true" signature="246:510" ph="SElECT g.gra... grades" />
+            <marker date="1511273939845" expanded="true" signature="1382:1629" ph="SElECT c.cla... grades" />
           </folding>
         </state>
       </provider>
@@ -732,7 +747,64 @@
     <entry file="file://$PROJECT_DIR$/api/edit_grade_api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/submit_grade_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/teacher_commands.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="117" column="31" lean-forward="false" selection-start-line="117" selection-start-column="31" selection-end-line="117" selection-end-column="31" />
+          <folding>
+            <element signature="n#check_teacher_class#0;n#!!top" expanded="false" />
+            <element signature="n#show_graded_students#0;n#!!top" expanded="false" />
+            <element signature="n#show_students#0;n#!!top" expanded="false" />
+            <element signature="n#updateGrade#0;n#!!top" expanded="false" />
+            <element signature="n#showStudentDetails#0;n#!!top" expanded="false" />
+            <element signature="n#deleteGrade#0;n#!!top" expanded="false" />
+            <element signature="n#showStudents#0;n#!!top" expanded="false" />
+            <marker date="1511275010100" expanded="true" signature="342:478" ph="SELECT c.id_... classes" />
+            <marker date="1511275010100" expanded="true" signature="342:517" ph="SELECT c.id_... classes" />
+            <marker date="1511275010100" expanded="true" signature="342:519" ph="SELECT c.id_... classes" />
+            <marker date="1511275010100" expanded="true" signature="342:531" ph="SELECT c.id_... classes" />
+            <marker date="1511275010100" expanded="true" signature="845:1063" ph="SELECT id_gr... grades" />
+            <marker date="1511275010100" expanded="true" signature="845:1071" ph="SELECT g.id_... grades" />
+            <marker date="1511275010100" expanded="true" signature="1604:1650" ph="SELECT * FRO... grades" />
+            <marker date="1511275010100" expanded="true" signature="1889:2155" ph="SELECT u.id_... teacher_department" />
+            <marker date="1511275010100" expanded="true" signature="1889:2156" ph="SELECT u.id_... teacher_department" />
+            <marker date="1511275010100" expanded="true" signature="1928:2155" ph="SELECT u.use... teacher_department" />
+            <marker date="1511275010100" expanded="true" signature="4125:4147" ph="..." />
+            <marker date="1511275010100" expanded="true" signature="4609:4699" ph="INSERT INTO grades... " />
+            <marker date="1511275010100" expanded="true" signature="5621:5669" ph="UPDATE grade... " />
+            <marker date="1511275010100" expanded="true" signature="5621:5714" ph="UPDATE grade... " />
+            <marker date="1511275010100" expanded="true" signature="6485:6656" ph="SELECT u.id_... " />
+            <marker date="1511275010100" expanded="true" signature="6977:7025" ph="DELETE FROM " />
+            <marker date="1511275010100" expanded="true" signature="7362:7685" ph="SELECT u.id_... teacher_department" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/grades_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/classes_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding />
         </state>
       </provider>
