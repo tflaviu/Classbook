@@ -19,8 +19,9 @@ function show_grades($type, $id_student)
             WHERE fk_student = '$id_student'
             ORDER BY c.class_name";
     $result = $db->query($sql);
-    while ($row = $result->fetch_assoc()) {
-        if ($type == 'web') {
+
+    if ($type == 'web') {
+        while ($row = $result->fetch_assoc()) {
             echo "<div class=\"student_row\"";
             echo "<span class=\"grade_span\">";
             echo $row['class_name'];
@@ -32,13 +33,17 @@ function show_grades($type, $id_student)
             echo $row['date'];
             echo "</span>";
             echo "</div>";
-        } else if ($type = 'api') {
-            $data = ["class_name" => $row['class_name'], "grade" => $row['grade']];
-            $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
-            echo json_encode($respone);
         }
+    } else if ($type = 'api') {
+        $data = [];
+        $i = 0;
+        while ($row = $result->fetch_assoc()) {
+            $data[$i] = ["class_name" => $row['class_name'], "grade" => $row['grade']];
+            $i++;
+        }
+        $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+        echo json_encode($respone);
     }
-
 }
 
 function show_classes($type, $id_student)
@@ -54,14 +59,17 @@ function show_classes($type, $id_student)
     $result = $db->query($sql);
 
     if (mysqli_num_rows($result) > 0) {
+        $data = [];
+        $i = 0;
         while ($row = $result->fetch_assoc()) {
-            $data = ["class" => $row['class_name']];
-            $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
-            echo json_encode($respone);
+            $data[$i] = ["class" => $row['class_name']];
+            $i++;
         }
+        $response = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+        echo json_encode($response);
     } else {
-        echo "No classes found!";
+        $data = ["message" => "No classes found!"];
+        $response = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
+        echo json_encode($response);
     }
-
-
 }

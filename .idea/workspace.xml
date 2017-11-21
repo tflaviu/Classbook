@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5bb5496-f705-4663-95ac-a56b0129f7f6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/teacher_commands.php" afterPath="$PROJECT_DIR$/php/teacher_commands.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/grades_api.php" afterPath="$PROJECT_DIR$/api/grades_api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/student_commands.php" afterPath="$PROJECT_DIR$/php/student_commands.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,45 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="teacher_commands.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/php/teacher_commands.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-              <folding>
-                <element signature="n#check_teacher_class#0;n#!!top" expanded="false" />
-                <element signature="n#show_graded_students#0;n#!!top" expanded="false" />
-                <element signature="n#show_students#0;n#!!top" expanded="false" />
-                <element signature="n#submit_grade#0;n#!!top" expanded="false" />
-                <element signature="e#5111#5488#0#PHP" expanded="false" />
-                <element signature="n#updateGrade#0;n#!!top" expanded="false" />
-                <element signature="n#showStudentDetails#0;n#!!top" expanded="false" />
-                <element signature="n#deleteGrade#0;n#!!top" expanded="false" />
-                <element signature="n#showStudents#0;n#!!top" expanded="false" />
-                <marker date="1511302250939" expanded="true" signature="290:426" ph="SELECT c.id_... classes" />
-                <marker date="1511302250939" expanded="true" signature="290:465" ph="SELECT c.id_... classes" />
-                <marker date="1511302250939" expanded="true" signature="290:467" ph="SELECT c.id_... classes" />
-                <marker date="1511302250939" expanded="true" signature="290:479" ph="SELECT c.id_... classes" />
-                <marker date="1511302250939" expanded="true" signature="813:1031" ph="SELECT id_gr... grades" />
-                <marker date="1511302250939" expanded="true" signature="813:1039" ph="SELECT g.id_... grades" />
-                <marker date="1511302250939" expanded="true" signature="1583:1629" ph="SELECT * FRO... grades" />
-                <marker date="1511302250939" expanded="true" signature="1868:2134" ph="SELECT u.id_... teacher_department" />
-                <marker date="1511302250939" expanded="true" signature="1868:2135" ph="SELECT u.id_... teacher_department" />
-                <marker date="1511302250939" expanded="true" signature="1907:2134" ph="SELECT u.use... teacher_department" />
-                <marker date="1511302250939" expanded="true" signature="4104:4126" ph="..." />
-                <marker date="1511302250939" expanded="true" signature="4608:4698" ph="INSERT INTO grades... " />
-                <marker date="1511302250939" expanded="true" signature="5619:5667" ph="UPDATE grade... " />
-                <marker date="1511302250939" expanded="true" signature="5619:5712" ph="UPDATE grade... " />
-                <marker date="1511302250939" expanded="true" signature="6483:6654" ph="SELECT u.id_... " />
-                <marker date="1511302250939" expanded="true" signature="6975:7023" ph="DELETE FROM " />
-                <marker date="1511302250939" expanded="true" signature="7360:7683" ph="SELECT u.id_... teacher_department" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -146,12 +108,12 @@
         <option value="$PROJECT_DIR$/pages/teacher.php" />
         <option value="$PROJECT_DIR$/api/edit_grade_api.php" />
         <option value="$PROJECT_DIR$/api/submit_grade_api.php" />
-        <option value="$PROJECT_DIR$/php/student_commands.php" />
         <option value="$PROJECT_DIR$/php/auth_function.php" />
-        <option value="$PROJECT_DIR$/api/grades_api.php" />
         <option value="$PROJECT_DIR$/api/classes_api.php" />
         <option value="$PROJECT_DIR$/api/test.php" />
         <option value="$PROJECT_DIR$/php/teacher_commands.php" />
+        <option value="$PROJECT_DIR$/api/grades_api.php" />
+        <option value="$PROJECT_DIR$/php/student_commands.php" />
       </list>
     </option>
   </component>
@@ -195,11 +157,6 @@
               <item name="Classbook" type="b2602c69:ProjectViewProjectNode" />
               <item name="Classbook" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Classbook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Classbook" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Classbook" type="b2602c69:ProjectViewProjectNode" />
@@ -279,18 +236,17 @@
       <workItem from="1511039575032" duration="3407000" />
       <workItem from="1511165269880" duration="14632000" />
       <workItem from="1511262051717" duration="13253000" />
-      <workItem from="1511301582862" duration="685000" />
+      <workItem from="1511301582862" duration="1807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200284000" />
+    <option name="totallyTimeSpent" value="201406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1295754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1295754" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -619,14 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/grades_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/classes_api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -643,20 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/student_commands.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="true" />
-            <element signature="n#show_grades#0;n#!!top" expanded="false" />
-            <element signature="n#show_classes#0;n#!!top" expanded="false" />
-            <marker date="1511273939845" expanded="true" signature="246:510" ph="SElECT g.gra... grades" />
-            <marker date="1511273939845" expanded="true" signature="1382:1629" ph="SElECT c.cla... grades" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/teacher.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -667,7 +601,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/teacher_commands.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="255">
           <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
           <folding>
             <element signature="n#check_teacher_class#0;n#!!top" expanded="false" />
@@ -697,6 +631,27 @@
             <marker date="1511302250939" expanded="true" signature="6975:7023" ph="DELETE FROM " />
             <marker date="1511302250939" expanded="true" signature="7360:7683" ph="SELECT u.id_... teacher_department" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/student_commands.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="67" column="59" lean-forward="true" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="59" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+            <element signature="n#show_grades#0;n#!!top" expanded="false" />
+            <marker date="1511303157523" expanded="true" signature="246:510" ph="SElECT g.gra... grades" />
+            <marker date="1511303157523" expanded="true" signature="1486:1733" ph="SElECT c.cla... grades" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/grades_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
