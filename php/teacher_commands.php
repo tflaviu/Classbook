@@ -100,7 +100,7 @@ function show_students()
 
 }
 
-function submit_grade($type, $student, $grade)
+function submit_grade($type, $student, $grade, $id_teacher)
 {
     include_once "../php/connect.php";
 
@@ -135,7 +135,7 @@ function submit_grade($type, $student, $grade)
         }
     } else {
 
-        $class = check_teacher_class($_SESSION['id_user']);
+        $class = check_teacher_class($id_teacher);
 
         foreach ($grade_array as $key => $n) {
             $sql = "INSERT INTO grades (fk_student, grade, fk_class) VALUES ('$student[$key]', '$n', '$class')";
@@ -144,7 +144,7 @@ function submit_grade($type, $student, $grade)
                 if ($type == 'web') {
                     $data = 1;
                 } else if ($type == 'api') {
-                    $data = '';
+                    $data = ["message" => "Grade successfully submited!"];
                     $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
                     echo json_encode($respone);
                 }
@@ -178,7 +178,7 @@ function updateGrade($type, $id_student, $new_grade)
         if ($type == "web") {
             header("Location: ../php/grade_edit.php?id=$id_student");
         } else if ($type == 'api') {
-            $data = '';
+            $data = ["message" => "Grade successfully edited!"];
             $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
             echo json_encode($respone);
         }

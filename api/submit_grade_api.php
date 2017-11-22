@@ -10,5 +10,6 @@ include_once "../php/teacher_commands.php";
 $type = 'api';
 $student = $_POST['student'];
 $grade = $_POST['grade'];
+$id_teacher = $_POST['id_teacher'];
 
-submit_grade($type, $student, $grade);
+submit_grade($type, $student, $grade, $id_teacher);

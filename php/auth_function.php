@@ -91,8 +91,7 @@ function register($type, $user_name, $email, $password, $confirm_password)
 //                $arr = ["logged_email" => $email, "loggedIn" => "true", "success" => "true"];
 //                echo json_encode($arr);
                 $data = [
-                    "loggedEmail" => $email,
-                    "loggedIn" => true,
+                    "message" => "Account succesfully created!"
                     ];
                 $respone = ['status' => ['success' => true, 'error' => ''], 'data' => $data];
                 echo json_encode($respone);
