@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5bb5496-f705-4663-95ac-a56b0129f7f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/api_documentation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/api_documentation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/submit_grade_api.php" afterPath="$PROJECT_DIR$/api/submit_grade_api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/auth_function.php" afterPath="$PROJECT_DIR$/php/auth_function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/teacher_commands.php" afterPath="$PROJECT_DIR$/php/teacher_commands.php" />
-    </list>
+    <list default="true" id="e5bb5496-f705-4663-95ac-a56b0129f7f6" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,128 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="api_documentation.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/api_documentation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="252" column="17" lean-forward="true" selection-start-line="252" selection-start-column="17" selection-end-line="252" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="classes_api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/classes_api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teacher_commands.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/teacher_commands.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="180" column="48" lean-forward="false" selection-start-line="180" selection-start-column="48" selection-end-line="180" selection-end-column="48" />
-              <folding>
-                <element signature="n#check_teacher_class#0;n#!!top" expanded="false" />
-                <element signature="n#show_graded_students#0;n#!!top" expanded="false" />
-                <element signature="n#show_students#0;n#!!top" expanded="false" />
-                <element signature="n#submit_grade#0;n#!!top" expanded="false" />
-                <element signature="e#5158#5535#0#PHP" expanded="false" />
-                <element signature="n#showStudentDetails#0;n#!!top" expanded="false" />
-                <element signature="n#deleteGrade#0;n#!!top" expanded="false" />
-                <element signature="n#showStudents#0;n#!!top" expanded="false" />
-                <marker date="1511349049963" expanded="true" signature="290:426" ph="SELECT c.id_... classes" />
-                <marker date="1511349049963" expanded="true" signature="290:465" ph="SELECT c.id_... classes" />
-                <marker date="1511349049963" expanded="true" signature="290:467" ph="SELECT c.id_... classes" />
-                <marker date="1511349049963" expanded="true" signature="290:479" ph="SELECT c.id_... classes" />
-                <marker date="1511349049963" expanded="true" signature="813:1031" ph="SELECT id_gr... grades" />
-                <marker date="1511349049963" expanded="true" signature="813:1039" ph="SELECT g.id_... grades" />
-                <marker date="1511349049963" expanded="true" signature="1583:1629" ph="SELECT * FRO... grades" />
-                <marker date="1511349049963" expanded="true" signature="1868:2134" ph="SELECT u.id_... teacher_department" />
-                <marker date="1511349049963" expanded="true" signature="1868:2135" ph="SELECT u.id_... teacher_department" />
-                <marker date="1511349049963" expanded="true" signature="1907:2134" ph="SELECT u.use... teacher_department" />
-                <marker date="1511349049963" expanded="true" signature="4117:4139" ph="..." />
-                <marker date="1511349049963" expanded="true" signature="4612:4702" ph="INSERT INTO grades... " />
-                <marker date="1511349049963" expanded="true" signature="5666:5714" ph="UPDATE grade... " />
-                <marker date="1511349049963" expanded="true" signature="5666:5759" ph="UPDATE grade... " />
-                <marker date="1511349049963" expanded="true" signature="6571:6742" ph="SELECT u.id_... " />
-                <marker date="1511349049963" expanded="true" signature="7063:7111" ph="DELETE FROM " />
-                <marker date="1511349049963" expanded="true" signature="7448:7771" ph="SELECT u.id_... teacher_department" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="submit_grade_api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/submit_grade_api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register_api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/register_api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="14" column="47" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auth_function.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/auth_function.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="103" column="25" lean-forward="false" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
-              <folding>
-                <element signature="n#login#0;n#!!top" expanded="false" />
-                <marker date="1511342943312" expanded="true" signature="826:891" ph="SELECT * FRO... users" />
-                <marker date="1511342943312" expanded="true" signature="2987:3094" ph="INSERT INTO users... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api_documentation.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/api_documentation.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/student.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="25" column="55" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -251,7 +123,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -374,18 +246,17 @@
       <workItem from="1511165269880" duration="14632000" />
       <workItem from="1511262051717" duration="13253000" />
       <workItem from="1511301582862" duration="1807000" />
-      <workItem from="1511340602487" duration="5885000" />
+      <workItem from="1511340602487" duration="6126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207291000" />
+    <option name="totallyTimeSpent" value="207532000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1500732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1500732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -682,54 +553,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/api/api_documentation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1135">
+          <caret line="252" column="17" lean-forward="true" selection-start-line="252" selection-start-column="17" selection-end-line="252" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/classes_api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/auth_function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="103" column="25" lean-forward="false" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
-          <folding>
-            <element signature="n#login#0;n#!!top" expanded="false" />
-            <marker date="1511342943312" expanded="true" signature="826:891" ph="SELECT * FRO... users" />
-            <marker date="1511342943312" expanded="true" signature="2987:3094" ph="INSERT INTO users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/register_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="14" column="47" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/submit_grade_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/api_documentation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/student.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="25" column="55" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="55" />
+          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -768,18 +603,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/classes_api.php">
+    <entry file="file://$PROJECT_DIR$/api/submit_grade_api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="184">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/api_documentation.php">
+    <entry file="file://$PROJECT_DIR$/api/register_api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="252" column="17" lean-forward="true" selection-start-line="252" selection-start-column="17" selection-end-line="252" selection-end-column="17" />
+        <state relative-caret-position="207">
+          <caret line="14" column="47" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/auth_function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="103" column="25" lean-forward="false" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
+          <folding>
+            <element signature="n#login#0;n#!!top" expanded="false" />
+            <marker date="1511342943312" expanded="true" signature="826:891" ph="SELECT * FRO... users" />
+            <marker date="1511342943312" expanded="true" signature="2987:3094" ph="INSERT INTO users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/api_documentation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/student.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="25" column="55" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding />
         </state>
       </provider>
